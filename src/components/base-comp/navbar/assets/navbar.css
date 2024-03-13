@@ -1,0 +1,28 @@
+body {
+  text-align: center;
+}
+
+.navbar_logo img {
+  width: 8%;
+  height: 8%;
+}
+
+.navbar_menu {
+  display: flex;
+  justify-content: center;
+}
+.navbar_menu button {
+  width: 15%;
+  color: none;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+.navbar_menu button h1 {
+  transition: 0.25s;
+}
+.navbar_menu button h1:hover {
+  transition: 0.25s;
+  color: #858585;
+}/*# sourceMappingURL=navbar.css.map */
