@@ -5,6 +5,7 @@ import Home from './components/home/Home.jsx'
 import About from './components/about/About.jsx'
 import Contact from './components/contact/Contact.jsx'
 import Navbar from './components/base-comp/navbar/navbar.jsx'
+import Wave from 'react-wavify'
 
 function App() {
   return (
