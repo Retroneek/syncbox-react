@@ -1,0 +1,45 @@
+.title{
+    text-align: center;
+    margin-top: 12rem;
+    font-size: 3rem;
+    color: white;
+}
+
+
+.home_control{
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    grid-row: auto auto;
+    padding: 2rem;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content:center;
+    height: 30em;
+
+
+    div:hover{
+        transition: .25s;
+        background-color: rgb(30, 25, 60);
+        box-shadow: inset 0px 7px 5px 0px rgb(15,15,30);
+    }
+
+    div{
+        transition: .25s;
+        background-color: rgb(40, 35, 70);
+        border-radius: 1.5rem;
+    }
+
+    h2 {
+        padding-top: 3rem;
+    }
+
+    img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+}
+
