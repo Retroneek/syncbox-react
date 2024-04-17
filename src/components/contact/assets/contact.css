@@ -1,21 +1,39 @@
-body {
-  background-color: rgb(40, 35, 70);
-}
-
-img {
-  border-radius: 2rem;
-  width: 30%;
-  height: 30%;
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: -1rem;
+.title {
   text-align: center;
+  margin-top: 8rem;
+  font-size: 3rem;
+  color: white;
 }
 
 .contactCard {
-  padding: 2rem;
+  position: relative;
+}
+.contactCard img {
+  border-radius: 2rem;
+  width: 15%;
+}
+
+.accessLinks {
+  text-align: center;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 4rem 4rem 4rem 4rem;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+  height: 4rem;
+}
+.accessLinks div {
+  border-radius: 1rem;
   background-color: rgb(40, 35, 70);
-  width: 20%;
+  transition: 0.25s;
+}
+.accessLinks div img {
+  width: 2rem;
+  margin-top: 1rem;
+}
+.accessLinks div:hover {
+  transition: 0.25s;
+  background-color: rgb(30, 25, 60);
+  box-shadow: inset 0px 3px 5px 0px rgb(15, 15, 30);
 }/*# sourceMappingURL=contact.css.map */

@@ -13,23 +13,27 @@ function Home() {
   return (
     <>
       <Navbar />
-      <h1 className="title"> Home </h1>
+      <h1 className="title"> Projects </h1>
       <div className="home_control">
-        <div id="syncDrive">
-          <h2>Drive</h2>
+        <div id="syncDrive" onClick={() => navigate("/drive")}>
+          <h2>Your Storage</h2>
           <img src={drive} />
+          <p>Unlimited Storage <br/> from our friends at Discord</p>
         </div>
         <div id="syncChat" onClick={() => navigate("/chat")}>
-          <h2>Chat</h2>
+          <h2>Chatroom</h2>
           <img src={chat} />
+          <p>Talk with your buddies <br/> without the teachers watching you</p>
         </div>
-        <div id="syncSettings">
-          <h2>Settings</h2>
+        <div id="fileTransfer" onClick={() => navigate("/fileTransfer")}>
+          <h2>File Transfer</h2>
           <img src={account} />
+          <p>Exchange documents <br/> between two clients directly</p>
         </div>
         <div id="syncAccount" onClick={() => navigate("/account")}>
           <h2>Account</h2>
           <img src={settings} />
+          <p>Modify account like <br/> settings, passwords, email and stuff</p>
         </div>
 
       </div>

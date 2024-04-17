@@ -8,7 +8,6 @@
 .home_control {
   text-align: center;
   position: relative;
-  margin-top: 2rem;
   display: grid;
   grid-template-columns: 15rem 15rem;
   grid-row: auto auto;
@@ -16,7 +15,7 @@
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   justify-content: center;
-  height: 30em;
+  height: 25em;
 }
 .home_control div:hover {
   transition: 0.25s;
@@ -29,9 +28,9 @@
   border-radius: 1.5rem;
 }
 .home_control h2 {
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 .home_control img {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }/*# sourceMappingURL=home.css.map */
