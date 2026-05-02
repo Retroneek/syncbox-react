@@ -1,7 +1,6 @@
-import React from "react";
 import "./assets/fileTransfer.css";
 
-function Chat() {
+function FileTransfer() {
   return (
     <>
       <h1 className="title">File Transfer</h1>
@@ -14,4 +13,4 @@ function Chat() {
 
 
 
-export default Chat;
+export default FileTransfer;

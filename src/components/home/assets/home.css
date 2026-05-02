@@ -1,36 +1,49 @@
-.title {
-  text-align: center;
-  margin-top: 12rem;
-  font-size: 3rem;
-  color: white;
-}
+/* Full-page home with hidden native scrollbar and section navigation */
 
-.home_control {
-  text-align: center;
-  position: relative;
-  display: grid;
-  grid-template-columns: 15rem 15rem;
-  grid-row: auto auto;
-  padding: 2rem;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  justify-content: center;
-  height: 25em;
-}
-.home_control div:hover {
-  transition: 0.25s;
-  background-color: rgb(30, 25, 60);
-  box-shadow: inset 0px 7px 5px 0px rgb(15, 15, 30);
-}
-.home_control div {
-  transition: 0.25s;
-  background-color: rgb(40, 35, 70);
-  border-radius: 1.5rem;
-}
-.home_control h2 {
-  padding-top: 1rem;
-}
-.home_control img {
-  width: 1.5rem;
-  height: 1.5rem;
-}/*# sourceMappingURL=home.css.map */
+.home-root { height: 100vh; width:100%; overflow-y: auto; scroll-behavior: smooth; scroll-snap-type: y proximity; -webkit-overflow-scrolling: touch }
+
+.page-section { height: 100vh; display:flex; align-items:center; justify-content:center; padding: 92px 28px; scroll-snap-align: start }
+.page-center { text-align:center }
+
+.intro-inner { max-width: 880px }
+.intro-title { font-size: clamp(28px, 6vw, 56px); margin: 0 0 12px }
+.intro-sub { color: rgba(220,230,255,0.75); margin: 0 0 18px }
+
+.card { max-width: 880px; background: rgba(6,8,16,0.24); padding: 28px; border-radius: 12px }
+.card h2 { margin: 0 0 10px }
+.card p { margin: 0; color: rgba(200,220,255,0.78) }
+
+/* Fade-only animation (no vertical movement) */
+.pop { opacity: 0; transform: none; transition: opacity 360ms ease; will-change: opacity }
+.page-section.is-visible .pop, .reveal.is-visible .pop { opacity: 1 }
+
+/* fixed overlay that crossfades between slide texts */
+.overlay { position: fixed; inset: 0; display:flex; align-items:center; justify-content:center; pointer-events: none; z-index: 5 }
+.overlay-item { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(88vw, 980px); text-align: center; opacity: 0 }
+.overlay-title { font-size: clamp(28px, 6vw, 56px); margin: 0 0 12px }
+.overlay-body { margin: 0; color: rgba(220,230,255,0.78) }
+
+/* allow interaction inside overlay (links) while keeping overlay container non-interactive */
+.overlay-item { pointer-events: auto }
+.contact-links a { cursor: pointer }
+
+.contact-links { margin-top: 10px; display:inline-flex; gap:8px; align-items:center; justify-content:center }
+.contact-links a { color: rgba(160,200,255,0.98); text-decoration: underline; font-weight: 600 }
+.contact-links span { opacity: 0.6 }
+
+/* keep page structural cards minimal (no border) */
+.card { min-height: 40vh; background: transparent; box-shadow: none }
+
+/* indicators (vertical) */
+.indicators { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); display:flex; flex-direction:column; gap:10px; pointer-events: none }
+.indicator-dot { width: 8px; height: 8px; border-radius: 999px; background: rgba(220,230,255,0.6); opacity: 0.3; transition: opacity 180ms ease }
+
+/* subtle progress bar at left (not wired) */
+.progress-bar { position: fixed; left: 12px; top: 20%; width: 3px; height: 60%; background: rgba(255,255,255,0.03); border-radius: 2px }
+.progress-fill { width: 100%; background: linear-gradient(180deg, rgba(80,160,255,0.9), rgba(20,60,160,0.9)); height: 0%; border-radius:2px; transition: height 120ms linear }
+
+/* hide native scrollbar but allow scrolling */
+.home-root::-webkit-scrollbar { width: 0; height: 0 }
+.home-root { -ms-overflow-style: none; scrollbar-width: none }
+
+@media (max-width:720px){ .intro-title{ font-size:32px } .page-section{ padding:64px 18px } }

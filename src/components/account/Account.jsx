@@ -1,4 +1,3 @@
-import React from "react";
 import "./assets/account.css";
 
 function Account() {

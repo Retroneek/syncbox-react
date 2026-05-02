@@ -1,7 +1,6 @@
-import React from "react";
 import "./assets/Drive.css";
 
-function Chat() {
+function Drive() {
   return (
     <>
       <h1 className="title">Drive</h1>
@@ -14,4 +13,4 @@ function Chat() {
 
 
 
-export default Chat;
+export default Drive;

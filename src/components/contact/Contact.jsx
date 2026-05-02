@@ -1,6 +1,4 @@
-import React from "react";
 import "./assets/contact.css";
-import Navbar from "../base-comp/navbar/navbar.jsx";
 import LinkedIn from "./assets/linkedin.png";
 import Github from "./assets/github.png";
 import Discord from "./assets/discord.png";
@@ -9,7 +7,6 @@ import Stack from "./assets/stack.png";
 function Contact() {
   return (
     <>
-      <Navbar />
       <h1 className="title"> Contact </h1>
       <>
         <div className="contactCard">
