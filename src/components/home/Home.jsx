@@ -69,7 +69,7 @@ export default function Home() {
       raf = requestAnimationFrame(() => {
         raf = null;
         const st = root.scrollTop;
-        const vh = window.innerHeight || root.clientHeight;
+        const vh = root.clientHeight || window.innerHeight;
         const idx = Math.floor(st / vh);
         const t = Math.min(1, Math.max(0, (st - idx * vh) / vh));
 

@@ -19,12 +19,12 @@
 
 /* fixed overlay that crossfades between slide texts */
 .overlay { position: fixed; inset: 0; display:flex; align-items:center; justify-content:center; pointer-events: none; z-index: 5 }
-.overlay-item { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(88vw, 980px); text-align: center; opacity: 0 }
+.overlay-item { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(88vw, 980px); text-align: center; opacity: 0; pointer-events: none }
 .overlay-title { font-size: clamp(28px, 6vw, 56px); margin: 0 0 12px }
 .overlay-body { margin: 0; color: rgba(220,230,255,0.78) }
 
 /* allow interaction inside overlay (links) while keeping overlay container non-interactive */
-.overlay-item { pointer-events: auto }
+.overlay-item a, .contact-links { pointer-events: auto }
 .contact-links a { cursor: pointer }
 
 .contact-links { margin-top: 10px; display:inline-flex; gap:8px; align-items:center; justify-content:center }
